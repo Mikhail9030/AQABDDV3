@@ -1,8 +1,39 @@
-For input string: ""
-java.lang.NumberFormatException: For input string: ""
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)
-	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 13 - let's create a new webdriver
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 89.0.4389.23 (since Google Chrome 89 is installed in your machine)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Acer\.m2\repository\webdriver\chromedriver\win32\89.0.4389.23\chromedriver.exe
+Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 39453
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар. 19, 2021 10:02:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] INFO com.codeborne.selenide.webdriver.BrowserResizer - Set browser size to 1366x768
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=89.0.4389.90 Platform=WINDOWS
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 5.11.0
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Create webdriver in current thread 13: ChromeDriver -> ChromeDriver: chrome on WINDOWS (b1a4ea002148738d31867db944775db7)
+0
+
+Element should be visible {[data-test-id = error-notification]}
+Element: '<div class="notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white" data-test-id="error-notification" displayed:false></div>'
+Actual value: visible:false
+Screenshot: file:/C:/Users/Acer/Desktop/AQABDDV3/build/reports/tests/1616180545972.0.png
+Page source: file:/C:/Users/Acer/Desktop/AQABDDV3/build/reports/tests/1616180545972.0.html
+Timeout: 4 s.
+Element should be visible {[data-test-id = error-notification]}
+Element: '<div class="notification notification_status_error notification_has-closer notification_stick-to_right notification_theme_alfa-on-white" data-test-id="error-notification" displayed:false></div>'
+Actual value: visible:false
+Screenshot: file:/C:/Users/Acer/Desktop/AQABDDV3/build/reports/tests/1616180545972.0.png
+Page source: file:/C:/Users/Acer/Desktop/AQABDDV3/build/reports/tests/1616180545972.0.html
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:72)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:10)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:148)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:100)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:66)
+	at com.sun.proxy.$Proxy15.shouldBe(Unknown Source)
+	at ru.netology.web.page.TransferPage.invalidMoneyTransfer(TransferPage.java:29)
 	at ru.netology.web.test.MoneyTransferTest.shouldBeErrorWhenAmountEmpty(MoneyTransferTest.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

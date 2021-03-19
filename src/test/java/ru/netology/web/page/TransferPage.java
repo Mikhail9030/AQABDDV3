@@ -28,4 +28,9 @@ public class TransferPage {
     public void invalidMoneyTransfer() {
         error.shouldBe(visible);
     }
+
+    public void moneyTransfer(String format) {
+        String amount = "0";
+        System.out.println(amount);
+    }
 }

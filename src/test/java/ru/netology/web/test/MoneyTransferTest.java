@@ -7,8 +7,6 @@ import ru.netology.web.page.DashboardPage;
 import ru.netology.web.page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static java.lang.Integer.parseInt;
-import static java.lang.String.valueOf;
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.netology.web.data.DataHelper.*;
 
@@ -67,8 +65,8 @@ public class MoneyTransferTest {
         val dashboardPage = new DashboardPage();
         val amount = "";
         val transferPage = dashboardPage.transferToFirstCard();
-        val transferInfo = getSecondCardNumber();
-        transferPage.moneyTransfer(TransferInfo, new String(amount));
+        getSecondCardNumber();
+        transferPage.moneyTransfer(String.format(amount));
         transferPage.invalidMoneyTransfer();
     }
 
