@@ -7,13 +7,14 @@ import ru.netology.web.page.DashboardPage;
 import ru.netology.web.page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
+import static java.lang.Integer.parseInt;
 import static java.lang.String.valueOf;
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.netology.web.data.DataHelper.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class MoneyTransferTest {
-
+    
     @BeforeEach
     void setUp() {
         val loginPage = open("http://localhost:9999", LoginPage.class);
@@ -67,7 +68,7 @@ public class MoneyTransferTest {
         val amount = "";
         val transferPage = dashboardPage.transferToFirstCard();
         val transferInfo = getSecondCardNumber();
-        transferPage.moneyTransfer(transferInfo, Integer.parseInt(amount));
+        transferPage.moneyTransfer(TransferInfo, new String(amount));
         transferPage.invalidMoneyTransfer();
     }
 
