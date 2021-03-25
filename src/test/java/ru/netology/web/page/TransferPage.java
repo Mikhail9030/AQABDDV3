@@ -18,6 +18,13 @@ public class TransferPage {
         heading.shouldBe(visible);
     }
 
+    public void withoutMoneyTransfer(DataHelper.TransferInfo TransferInfo, String amount) {
+        amountInput.setValue(String.valueOf(amount));
+        fromInput.setValue(TransferInfo.getCard());
+        transferButton.click();
+        new DashboardPage();
+    }
+
     public void moneyTransfer(DataHelper.TransferInfo TransferInfo, int amount) {
         amountInput.setValue(String.valueOf(amount));
         fromInput.setValue(TransferInfo.getCard());
@@ -29,8 +36,4 @@ public class TransferPage {
         error.shouldBe(visible);
     }
 
-    public void moneyTransfer(String format) {
-        String amount = "0";
-        System.out.println(amount);
-    }
 }

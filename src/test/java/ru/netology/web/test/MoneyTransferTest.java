@@ -65,8 +65,8 @@ public class MoneyTransferTest {
         val dashboardPage = new DashboardPage();
         val amount = "";
         val transferPage = dashboardPage.transferToFirstCard();
-        getSecondCardNumber();
-        transferPage.moneyTransfer(String.format(amount));
+        val transferInfo = getSecondCardNumber();
+        transferPage.withoutMoneyTransfer(transferInfo, amount);
         transferPage.invalidMoneyTransfer();
     }
 
